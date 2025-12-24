@@ -6,12 +6,11 @@ const port = 3000;
 // Importar controllers
 const professorController = require('../controllers/professor-controller');
 const departamentoController = require('../controllers/departamento-controller');
-// TO-DO: habilitar quando os controllers estiverem prontos
-// const impressaoController = require('../controllers/impressao-controller');
+const impressaoController = require('../controllers/impressao-controller');
 
 // --------------------------------- Rotas ---------------------------------
 
-
+// Rota para listar professores
 app.post('/api/professores/list', (req, res) => {
     try {
         // 
@@ -24,5 +23,5 @@ app.post('/api/professores/list', (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
-
+// Todo: Adicionar mais rotas 
 module.exports = app;
